@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.border {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.border div {
+  background-color: black;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #19181a;
+}
+.wrap header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap header .logo {
+  display: flex;
+  align-items: center;
+}
+.wrap header .logo img {
+  width: 70px;
+}
+.wrap header .logo span {
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 2em;
+  margin-top: 10px;
+}
+.wrap header nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+.wrap header nav span {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.wrap header nav span:nth-child(2) {
+  color: #ff2200;
+  margin: 0 20px;
+}
+.wrap main {
+  width: 100%;
+  padding: 20px 50px 0px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.wrap main .chooseTitle {
+  font-weight: 700;
+  color: white;
+  background: #8b8b8b;
+  background: linear-gradient(180deg, #8b8b8b 0%, white 100%);
+  font-size: 2.5em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrap main .menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap main .menu .chooseFood {
+  padding-top: 160px;
+  display: flex;
+  align-items: center;
+}
+.wrap main .menu .chooseFood .spinMenu {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 4px solid #ff2200;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -250px;
+  transition: 0.5s;
+}
+.wrap main .menu .chooseFood .spinMenu .row {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.wrap main .menu .chooseFood .spinMenu .row .dish {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ff2200;
+  position: relative;
+  background-color: #19181a;
+  background-size: cover;
+  background-position: center;
+}
+.wrap main .menu .chooseFood .spinMenu .rowHor {
+  width: 100%;
+  height: 100px;
+}
+.wrap main .menu .chooseFood .spinMenu .rowHor .dish:first-child {
+  right: 54px;
+  background-image: url(https://pngimg.com/uploads/pizza/pizza_PNG7151.png);
+}
+.wrap main .menu .chooseFood .spinMenu .rowHor .dish:last-child {
+  left: 54px;
+  background-image: url(../img/brocolliSalad.png);
+}
+.wrap main .menu .chooseFood .spinMenu .row45deg {
+  width: 100px;
+  height: 100%;
+  transform: rotate(30deg);
+  flex-direction: column;
+}
+.wrap main .menu .chooseFood .spinMenu .row45deg .dish:first-child {
+  bottom: 54px;
+  background-image: url(../img/kindpng_3340382.png);
+}
+.wrap main .menu .chooseFood .spinMenu .row45deg .dish:last-child {
+  top: 54px;
+  background-image: url(../img/sushiSet.png);
+}
+.wrap main .menu .chooseFood .spinMenu .row-45deg {
+  width: 100px;
+  height: 100%;
+  transform: rotate(-30deg);
+  flex-direction: column;
+}
+.wrap main .menu .chooseFood .spinMenu .row-45deg .dish:first-child {
+  bottom: 54px;
+  background-image: url(../img/pasta.png);
+}
+.wrap main .menu .chooseFood .spinMenu .row-45deg .dish:last-child {
+  top: 54px;
+  background-image: url(../img/steak.png);
+}
+.wrap main .menu .chooseFood .foodName {
+  width: 250px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2em;
+  font-weight: 700;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 250px;
+}
+.wrap main .menu .chooseFood .foodName span {
+  color: #ff2200;
+  margin-right: 10px;
+}
+.wrap main .menu .ingradientsBox {
+  width: 450px;
+  height: 450px;
+  border-radius: 30px;
+  background-color: #fff;
+  background-image: url(../img/shaddow.png);
+  background-size: cover;
+  margin: 70px 200px 0 0;
+  color: black;
+  padding: 20px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrap main .menu .ingradientsBox > span {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.wrap main .menu .ingradientsBox .ingragients {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content {
+  width: 90%;
+  height: 130px;
+  border: 3px solid #a1a1a1;
+  border-radius: 20px;
+  overflow: auto;
+  padding: 0 2%;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content .FoodInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content .FoodInfo span {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content .border {
+  margin: 0;
+  padding: 0;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content::-webkit-scrollbar {
+  width: 5px;
+}
+.wrap main .menu .ingradientsBox .ingragients .ingragients__content::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #19181a;
+}
+.wrap main .menu .ingradientsBox .priceBox {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.wrap main .menu .ingradientsBox .priceBox span {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+.wrap main .menu .ingradientsBox .comandBlock {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.wrap main .menu .ingradientsBox .comandBlock .comandBlock__btn {
+  background-color: #e13f26;
+  height: 60px;
+  box-shadow: 0px 5px 5px #9c210e;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.wrap main .menu .ingradientsBox .comandBlock .comandBlock__btn:active {
+  box-shadow: 0px 2px 2px #9c210e;
+  position: relative;
+  top: 3px;
+}
+.wrap main .menu .ingradientsBox .comandBlock .previous {
+  width: 155px;
+}
+.wrap main .menu .ingradientsBox .comandBlock .toCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+.wrap main .menu .ingradientsBox .comandBlock .toCart img {
+  width: 55%;
+}
+.wrap main .menu .ingradientsBox .comandBlock .next {
+  width: 155px;
+}
+
+@media screen and (max-width: 1412px) {
+  .wrap header .logo img {
+    width: 60px;
+  }
+  .wrap header .logo span {
+    font-size: 1.8em;
+    margin-top: 15px;
+  }
+  .wrap main .chooseTitle {
+    font-size: 2.2em;
+  }
+  .wrap main .menu .chooseFood {
+    padding-top: 100px;
+  }
+  .wrap main .menu .ingradientsBox {
+    width: 400px;
+    height: 400px;
+    margin: 50px 150px 0 0;
+  }
+  .wrap main .menu .ingradientsBox .border {
+    margin-top: 10px;
+  }
+  .wrap main .menu .ingradientsBox .priceBox {
+    margin-top: 15px;
+  }
+  .wrap main .menu .ingradientsBox > span {
+    font-size: 2em;
+  }
+  .wrap main .menu .ingradientsBox .ingragients {
+    margin-top: 15px;
+  }
+  .wrap main .menu .ingradientsBox .ingragients .ingragients__content {
+    height: 120px;
+  }
+  .wrap main .menu .ingradientsBox .ingragients .ingragients__content .FoodInfo {
+    margin: 15px 0;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock {
+    margin-top: 30px;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .comandBlock__btn {
+    height: 55px;
+    font-size: 1.2em;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .toCart {
+    width: 75px;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .previous, .wrap main .menu .ingradientsBox .comandBlock .next {
+    width: 135px;
+  }
+  .wrap main .menu .chooseFood .foodName {
+    left: 140px;
+  }
+  .wrap main .menu .chooseFood .spinMenu {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    border: 3px solid #ff2200;
+  }
+  .wrap main .menu .chooseFood .spinMenu .row .dish {
+    width: 90px;
+    height: 90px;
+    border: 3px solid #ff2200;
+  }
+  .wrap main .menu .chooseFood .spinMenu .row-45deg, .wrap main .menu .chooseFood .spinMenu .row45deg {
+    width: 90px;
+  }
+  .wrap main .menu .chooseFood .spinMenu .rowHor {
+    height: 90px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .border div {
+    width: 5px;
+    height: 5px;
+  }
+
+  .wrap header {
+    padding: 15px 50px;
+  }
+  .wrap header nav span {
+    font-size: 1.1em;
+  }
+  .wrap header .logo img {
+    width: 50px;
+  }
+  .wrap header .logo span {
+    font-size: 1.5em;
+  }
+  .wrap main .chooseTitle {
+    font-size: 2em;
+  }
+  .wrap main .menu .ingradientsBox {
+    width: 350px;
+    height: 350px;
+    margin: 30px 10px 0 0;
+  }
+  .wrap main .menu .ingradientsBox > span {
+    font-size: 1.8em;
+  }
+  .wrap main .menu .ingradientsBox .priceBox span {
+    font-size: 1.2em;
+  }
+  .wrap main .menu .ingradientsBox .ingragients .ingragients__content {
+    height: 110px;
+  }
+  .wrap main .menu .ingradientsBox .ingragients .ingragients__content .FoodInfo {
+    margin: 10px 0;
+  }
+  .wrap main .menu .ingradientsBox .ingragients .ingragients__content .FoodInfo span {
+    font-size: 1.1em;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock {
+    margin-top: 20px;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .comandBlock__btn {
+    font-size: 1.1em;
+    font-weight: 500;
+    height: 51px;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .previous, .wrap main .menu .ingradientsBox .comandBlock .next {
+    width: 115px;
+  }
+  .wrap main .menu .ingradientsBox .comandBlock .toCart {
+    width: 70px;
+  }
+  .wrap main .menu .chooseFood {
+    padding-top: 50px;
+  }
+  .wrap main .menu .chooseFood .foodName {
+    right: 150px;
+    font-size: 1.8em;
+  }
+  .wrap main .menu .chooseFood .spinMenu {
+    width: 300px;
+    height: 300px;
+    left: -205px;
+  }
+}
+@media screen and (max-width: 840px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    min-height: 100vh;
+    padding-bottom: 50px;
+  }
+  .wrap header nav {
+    display: none;
+  }
+  .wrap main .menu {
+    flex-direction: column;
+  }
+  .wrap main .menu .chooseFood {
+    width: 100%;
+    padding-top: 100px;
+  }
+  .wrap main .menu .ingradientsBox {
+    margin-top: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
